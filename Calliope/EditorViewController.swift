@@ -26,6 +26,13 @@ final class EditorViewController: BaseViewController, WKNavigationDelegate, WKUI
         self.view.addSubview(webView)
         self.webview = webView
 
+        if #available(iOS 13.0, *), traitCollection.userInterfaceIdiom == .pad {
+            //TODO: turn this off when microsoft pxt and nepo can handle the new useragent of iOS13
+            // i.e. they check in a different way for the browser type,
+            // e.g. as suggested on https://51degrees.com/blog/missing-ipad-tablet-web-traffic
+            webView.customUserAgent = "Mozilla/5.0 (iPad; CPU OS 12_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.1 Mobile/15E148 Safari/604.1"
+        }
+
         guard let url = editor.url else {
             LOG("URL is empty!)")
             return

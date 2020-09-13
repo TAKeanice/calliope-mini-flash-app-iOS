@@ -88,8 +88,8 @@ class SettingsViewController: UIViewController {
             make.width.equalToSuperview().multipliedBy(0.9)
             make.height.equalToSuperview().multipliedBy(0.25)
         }
-        // Colliop
-        calliopeView = TextFieldView(title: "Colliope mini Editor",
+        // Calliope
+        calliopeView = TextFieldView(title: "Calliope mini Editor",
                                  color: Styles.colorYellow,
                                  text: URLManager.calliopeUrl ?? "") { [weak self] (text) in
                                     self?.editedCalliopeUrl = text

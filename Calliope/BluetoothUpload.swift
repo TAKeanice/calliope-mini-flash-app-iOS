@@ -57,11 +57,11 @@ final class BluetoothUpload: NSObject, LoggerDelegate, DFUServiceDelegate, DFUPr
 
                 me.block(.rebooted(peripheral: peripheral))
 
-                let initiator = DFUServiceInitiator(centralManager: central, target: peripheral).with(firmware: firmware)
+                let initiator = DFUServiceInitiator().with(firmware: firmware)
                 initiator.logger = me
                 initiator.delegate = me
                 initiator.progressDelegate = me
-                me.uploading = initiator.start()
+                me.uploading = initiator.start(target: peripheral)
             } else {
 
                 ERR("uploader failed ot find peripheral \(me.uuid)")
@@ -89,7 +89,7 @@ final class BluetoothUpload: NSObject, LoggerDelegate, DFUServiceDelegate, DFUPr
     }
 
     func dfuStateDidChange(to state: DFUState) {
-        LOG("state: \(state.description)")
+        LOG("state: \(String(describing: state.description))")
         switch(state) {
         case .aborted:
             break

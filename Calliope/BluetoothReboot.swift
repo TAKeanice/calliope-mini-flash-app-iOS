@@ -52,6 +52,8 @@ final class BluetoothReboot: NSObject, CBCentralManagerDelegate, CBPeripheralDel
             block("bluetooth unsupported", central, nil)
         case .unknown:
             block("bluetooth state unknown", central, nil)
+        @unknown default:
+            block("bluetooth state unknown", central, nil)
         }
     }
 
@@ -163,7 +165,7 @@ final class BluetoothReboot: NSObject, CBCentralManagerDelegate, CBPeripheralDel
             for characteristic in characteristics {
                 if (characteristic.uuid == uuid_service_reboot) {
                     LOG("writing reboot to dfu")
-                    let data = Data(bytes: [0x01])
+                    let data = Data([0x01])
                     peripheral.writeValue(data, for: characteristic, type: .withResponse)
                     state = .wrote
                 }
