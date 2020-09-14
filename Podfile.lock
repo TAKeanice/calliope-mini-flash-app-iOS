@@ -1,32 +1,28 @@
 PODS:
-  - iOSDFULibrary (4.7.2):
+  - iOSDFULibrary (4.8.0):
     - ZIPFoundation (= 0.9.11)
   - SnapKit (5.0.1)
   - TPKeyboardAvoiding (1.3.4)
-  - Zip (1.1.0)
   - ZIPFoundation (0.9.11)
 
 DEPENDENCIES:
-  - iOSDFULibrary (~> 4.7.1)
+  - iOSDFULibrary (~> 4.8.0)
   - SnapKit (~> 5.0.1)
   - TPKeyboardAvoiding
-  - Zip (~> 1.1)
 
 SPEC REPOS:
   trunk:
     - iOSDFULibrary
     - SnapKit
     - TPKeyboardAvoiding
-    - Zip
     - ZIPFoundation
 
 SPEC CHECKSUMS:
-  iOSDFULibrary: 213608bf93ace7f9d6582453a9498ec384642f97
+  iOSDFULibrary: 829d71cd4caa53eed1f0354c81329e5c0f496e93
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   TPKeyboardAvoiding: 7c2187e2338052b2c5be4a8052f297fdb124e261
-  Zip: 8877eede3dda76bcac281225c20e71c25270774c
   ZIPFoundation: b1f0de4eed33e74a676f76e12559ab6b75990197
 
-PODFILE CHECKSUM: 4cbcd10e9f7d5d4457e820a8663e30961bd831c9
+PODFILE CHECKSUM: b11228a827c5022f956f8a00dffcff7dc2a638dc
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.10.0.beta.2
