@@ -33,6 +33,7 @@ final class MicrobitEditor: Editor {
     func download(_ request: URLRequest) -> EditorDownload? {
         guard let s = request.url?.absoluteString else { return nil }
         let matches = s.matches(regex: "^data:application/x-calliope-hex")
+            + s.matches(regex: "^data:application/x-microbit-hex")
         guard matches.count == 1 else { return nil }
         guard let url = URL(string:s) else { return nil }
         return EditorDownload(name: "makecode-" + UUID().uuidString, url: url)
