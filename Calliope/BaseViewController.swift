@@ -2,6 +2,11 @@ import UIKit
 
 class BaseViewController: UIViewController {
 
+    override var isModalInPresentation: Bool {
+        get { true }
+        set {  }
+    }
+
     func createCancelButton() -> UIButton {
         let button = UIButton(type: .system)
         button.setTitle("button.cancel".localized, for: .normal)

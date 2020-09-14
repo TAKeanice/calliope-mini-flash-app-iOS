@@ -182,6 +182,7 @@ final class MainViewController: BaseViewController {
         let vc = ScannerViewController()
         let nc = UINavigationController(rootViewController: vc)
         nc.modalTransitionStyle = .coverVertical
+        nc.modalPresentationStyle = .fullScreen
         present(nc, animated: true)
     }
 

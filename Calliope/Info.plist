@@ -52,6 +52,8 @@
 	</dict>
 	<key>NSBluetoothPeripheralUsageDescription</key>
 	<string>BLE used to pair your device with your Calliope mini.</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>BLE used to pair your device with your Calliope mini.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>RobotoMono-Regular.ttf</string>
